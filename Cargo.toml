@@ -1,0 +1,11 @@
+[package]
+name = "tiny_renderer"
+version = "0.1.0"
+authors = ["Arvind Rao <arvsrao@gmail.com>"]
+
+[dependencies]
+imagefmt = "4.0.0"
+tobj = "0.1.6"
+rand = "0.6.5"
+generic-array = "0.12.0"
+typenum = "1.10.0"

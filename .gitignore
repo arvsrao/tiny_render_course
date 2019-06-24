@@ -1,5 +1,5 @@
 Cargo.lock
 /target
+/output_images
 **/*.rs.bk
-*.tga
 *DS_Store

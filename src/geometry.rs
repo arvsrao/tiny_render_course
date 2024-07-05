@@ -230,7 +230,11 @@ impl Triangle {
             z: edges[0].x * edges[1].y - edges[0].y * edges[1].x,
         };
 
-        bc / (bc.x.abs() + bc.y.abs() + bc.z.abs())
+        // if the test point is in the triangle then the coefficients are all non-negative, 
+        // and the sum to 1. Crossing product will not enforce the sum invariant; so divide by
+        // sum. Importantly not the sum of the absolute values. Points outside the triangle will
+        // have negative coefficents.
+        bc / (bc.x + bc.y + bc.z)
     }
 
     pub fn point_in_triangle_opt(&self, x: f32, y: f32) -> bool {
